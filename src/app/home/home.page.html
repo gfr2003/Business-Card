@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="purple">
+    <ion-title> More About Me... </ion-title>
+    <ion-icon
+      class="iconTheme"
+      *ngIf="lightTheme"
+      slot="end"
+      name="moon"
+    ></ion-icon>
+    <ion-icon
+      class="iconTheme"
+      *ngIf="!lightTheme"
+      slot="end"
+      name="sunny-outline"
+    ></ion-icon>
+    <ion-toggle
+      id="themeToggle"
+      (ionChange)="onToggleColorTheme($event)"
+      slot="end"
+    ></ion-toggle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="appearShakeIt" [fullscreen]="true">
+  <div id="container" >
+    <img
+      class="photoContainer"
+      src="../../assets/gustavo_felix.jpg"
+      alt="Minha foto"
+    />
+    <div class="titleContainer">
+      <strong>Hi! I am Gustavo</strong>
+      <strong>Full Stack Developer</strong>
+    </div>
+    <nav class="findMe">
+      <a
+        class="iconsLinks"
+        href="https://www.linkedin.com/in/gufelix/"
+        target="_blank"
+        ><ion-icon name="logo-linkedin"></ion-icon
+      ></a>
+      <a class="iconsLinks" href="https://github.com/gfr2003" target="_blank"
+        ><ion-icon name="logo-github"></ion-icon
+      ></a>
+      <a
+        class="iconsLinks"
+        href="https://www.instagram.com/gu2003fr/"
+        target="_blank"
+        ><ion-icon name="logo-instagram"></ion-icon
+      ></a>
+      <a
+        class="iconsLinks"
+        href="https://gustavo-tech.web.app/"
+        target="_blank"
+        ><ion-icon name="globe-outline"></ion-icon></a>
+    </nav>
+  </div>
+  <ion-item class="footerContainer">
+    <ion-label >Developed with Angular and Ionic</ion-label>
+  </ion-item>
+</ion-content>
